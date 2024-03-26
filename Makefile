@@ -280,6 +280,7 @@ install-strip: build strip_options install
 
 install: build
 	mkdir -p $(DESTDIR)$(PREFIX)${includedir}
+	mkdir -p $(DESTDIR)$(PREFIX)${libdir}
 	$(INSTALL_DATA) ${INSTALL_OPTS} ${MQTTLIB_C_TARGET} $(DESTDIR)${libdir}
 	$(INSTALL_DATA) ${INSTALL_OPTS} ${MQTTLIB_CS_TARGET} $(DESTDIR)${libdir}
 	$(INSTALL_DATA) ${INSTALL_OPTS} ${MQTTLIB_A_TARGET} $(DESTDIR)${libdir}
